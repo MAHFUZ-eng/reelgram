@@ -1,6 +1,6 @@
 const jwt = require('jsonwebtoken');
 // Make sure the filename matches exactly: user.js
-const User = require('../../models/User');  
+const User = require('../../models/user');  
 
 const auth = async (req, res, next) => {
   try {
