@@ -9,7 +9,7 @@ const { initSocket } = require("./socket");
 
 // Import routes
 const authRoutes = require("../routes/auth");
-const userRoutes = require("../routes/user");
+const userRoutes = require("../routes/User");
 const reelRoutes = require("../routes/reels");
 const chatRoutes = require("../routes/chat");
 
