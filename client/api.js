@@ -1,7 +1,7 @@
 // API service layer for Reelgram client
 class ReelgramAPI {
   constructor() {
-    this.baseURL = '/api';
+    this.baseURL = 'https://reelgram-ch9j.onrender.com/api';
     this.token = localStorage.getItem('rg_auth_token');
   }
 
