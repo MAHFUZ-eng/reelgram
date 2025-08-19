@@ -1,9 +1,9 @@
 const express = require('express');
 const multer = require('multer');
 const path = require('path');
-const { auth } = require('../src/middleware/auth');
+const { auth } = require('../src/middleware/Auth');
 const Reel = require('../models/reel');
-const Like = require('../models/like');
+const Like = require('../models/Like');
 const Comment = require('../models/comment');
 
 const router = express.Router();
