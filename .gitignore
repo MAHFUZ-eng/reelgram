@@ -64,3 +64,11 @@ pids
 
 # Serverless directories
 .serverless
+
+# Uploads directory (user content)
+uploads/
+
+# Test files
+*.mp4
+*.mov
+*.avi
