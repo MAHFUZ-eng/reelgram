@@ -446,9 +446,20 @@
   const closeInboxBtn = $('#closeInbox');
   const openFullInbox = $('#openFullInbox');
 
-  openInboxBtn.addEventListener('click', openInbox);
-  openFullInbox.addEventListener('click', openInbox);
-  closeInboxBtn.addEventListener('click', ()=>inboxModal.close());
+  document.addEventListener("DOMContentLoaded", () => {
+  if (openInboxBtn) {
+    openInboxBtn.addEventListener("click", openInbox);
+  }
+
+  if (openFullInbox) {
+    openFullInbox.addEventListener("click", openInbox);
+  }
+
+  if (closeInboxBtn) {
+    closeInboxBtn.addEventListener("click", () => inboxModal.close());
+  }
+});
+
 
   const chatUsersEl = $('#chatUsers');
   const chatLogEl   = $('#chatLog');
