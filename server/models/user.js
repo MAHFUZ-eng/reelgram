@@ -1,6 +1,6 @@
-const { Schema, model } = require('mongoose');
+const mongoose = require('mongoose');
 
-const userSchema = new Schema({
+const userSchema = new mongoose.Schema({
   username: { type: String, unique: true, required: true, index: true },
   displayName: { type: String, required: true },
   email: { type: String, unique: true, required: true, index: true },
@@ -11,4 +11,5 @@ const userSchema = new Schema({
   createdAt: { type: Date, default: Date.now }
 });
 
-module.exports = model('User', userSchema);
+// Prevent OverwriteModelError if model already exists
+module.exports = mongoose.models.User || mongoose.model('User', userSchema);
